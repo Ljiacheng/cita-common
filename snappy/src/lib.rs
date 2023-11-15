@@ -68,7 +68,7 @@ impl From<SnappyStatus> for SnappyError {
     }
 }
 
-#[link(name = "snappy")]
+#[link(name = "snappy", kind = "static")]
 extern "C" {
     fn snappy_compress(
         input: *const c_char,
